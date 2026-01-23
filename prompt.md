@@ -1,3 +1,10 @@
+### 原始 LLaVA 推理
+```bash
+python -m llava.serve.cli \
+    --model-path /data1/cwk/mllm/models/llava-v1.5-7b \
+    --image-file "/data1/cwk/mllm/project/LLaVA/test.png" \
+    --load-4bit
+```
 ## Method: Reasoning-Coupled Progressive Visual Token Pruning
 
 多模态大模型在视觉理解任务中产生幻觉的一个重要原因在于：  
@@ -131,3 +138,5 @@ s_{i,t} = \cos(h_t,\; \tilde{v}_i)
   随解码步推进，逐步提高裁剪强度与对比系数 $\lambda$。此阶段模型更易受冗余或错误视觉证据干扰，DRCD 机制强化介入，在抑制幻觉的同时减少 KV Cache 规模，从而提升推理效率。
 
 该渐进式策略确保视觉上下文重构与推理深度自然对齐，实现稳定性与纠偏能力之间的平衡。
+
+
