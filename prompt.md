@@ -1,3 +1,12 @@
+
+
+
+/data1/cwk/mllm/models/llava-v1.5-7b
+
+
+"/data1/cwk/mllm/project/LLaVA/test.png"
+
+
 ### 原始 LLaVA 推理测试指令（可供改进后模型的测试）
 ```bash
 CUDA_VISIBLE_DEVICES=0 python -m llava.serve.cli \
