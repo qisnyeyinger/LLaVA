@@ -139,3 +139,12 @@ CUDA_VISIBLE_DEVICES=0 python -m llava.serve.cli \
     --image-file "/data1/cwk/mllm/project/LLaVA/test.png" \
     --load-4bit
 ```
+python -m llava.serve.cli_pruning \
+    --model-path /data1/cwk/mllm/models/llava-v1.5-7b \
+    --image-file "/data1/cwk/mllm/project/LLaVA/test.png" \
+    --enable-pruning \
+    --consistency-threshold 0.5 \
+    --contrast-coefficient 1.0 \
+    --enable-drcd \
+    --enable-progressive
+
